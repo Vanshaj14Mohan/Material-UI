@@ -3,6 +3,8 @@
 // import viteLogo from '/vite.svg'
 // import './App.css'
 import Button from '@mui/material/Button'; //this button is itself a component.
+import SendIcon from '@mui/icons-material/Send';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 function App() {
 
@@ -24,8 +26,13 @@ function App() {
       <br></br>
       <br></br>
       <Button variant="contained" color="success" onClick={handleClick}>Success</Button>
-    </>
-  )
+      <br></br>
+      <br></br>
+      <Button variant="contained" endIcon={<SendIcon />}>Send</Button>
+      <br></br>
+      <br></br>
+      <Button variant="outlined" startIcon={<DeleteIcon />}>Delete</Button></>
+  );
 }
 
 export default App
