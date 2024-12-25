@@ -10,9 +10,15 @@ export default function SearchBox(){
     const API_KEY = "1ec3f718d37c7ecf8bd2cd370bb03ec0";
 
     let getWeatherInfo = async () =>{ //function to get weather info
-        let response = await fetch(`${API_URL}?q=${city}&appind=${API_KEY}`);
+        let response = await fetch(`${API_URL}?q=${city}&appid=${API_KEY}&units=metric`);
         let jsonResponse = await response.json();
         console.log(jsonResponse);
+        let result = {
+            temp: jsonResponse.main.temp,
+            tempMin: jsonResponse.main.temp_min,
+            tempMax: jsonResponse.main.temp_max,
+
+        }
 
     }
 
@@ -24,6 +30,7 @@ export default function SearchBox(){
         event.preventDefault(); //to prevent default behavior of event object
         console.log(city);
         setCity("");
+        getWeatherInfo();
     };
 
     return(
