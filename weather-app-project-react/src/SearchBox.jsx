@@ -27,7 +27,7 @@ export default function SearchBox(){
         setCity(event.target.value);
     };
 
-    let handleSubmit = (event) =>{
+    let handleSubmit = (event) =>{ //for submission
         event.preventDefault(); //to prevent default behavior of event object
         console.log(city);
         setCity("");
