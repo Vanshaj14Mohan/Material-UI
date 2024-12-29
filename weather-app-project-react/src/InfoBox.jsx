@@ -16,7 +16,6 @@ export default function InfoBox(){
     tempMin: 17.94,
     weather: "clear sky",
    };
-
     return(
         <div className="Info">
         <h2>Weather Information - {info.weather} </h2>
