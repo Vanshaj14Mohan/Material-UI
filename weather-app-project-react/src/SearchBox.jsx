@@ -53,7 +53,7 @@ export default function SearchBox({updateInfo}){
             <TextField id="city" label="City Name" variant="outlined" required value={city} onChange={handleChange} />
             <br></br><br></br>
             <Button variant="contained" type="submit">Search</Button>
-            {error && <p>No such place exist in the API</p>}
+            {error && <p style = {{color: "red"}}>No such place exist in the API</p>}
             </form>
         </div>
     );
