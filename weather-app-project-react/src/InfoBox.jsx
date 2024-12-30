@@ -19,6 +19,7 @@ export default function InfoBox(){
     return(
         <div className="Info">
         <h2>Weather Information - {info.weather} </h2>
+        <div className="cardContainer">
         <Card sx={{ maxWidth: 345 }}>
       <CardMedia
         sx={{ height: 140 }}
@@ -38,6 +39,7 @@ export default function InfoBox(){
         </Typography>
       </CardContent>
     </Card>
+    </div>
         </div>
     );
 }
